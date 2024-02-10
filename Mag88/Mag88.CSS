@@ -1,0 +1,265 @@
+@charset "UTF-8";
+
+html {
+  font-size: 100%;
+}
+body {
+  color: #2b2a27;
+}
+
+main {
+  font-size: 0.9rem;
+}
+img {
+  max-width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #2b2a27;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+.section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+}
+
+input {
+  border: #2b2a27 solid 1px;
+  width: 130px;
+  padding: 13px;
+  margin-top: 30px;
+  font-size: 0.7rem;
+}
+
+input:hover {
+ opacity: 0.5;
+ border: #000000 solid 3px;
+ background-color: rgb(30, 30, 30);
+ color: #f7f7f7;
+}
+
+
+
+/* --header-------------------------- */
+#header {
+  height: 100vh;
+  background-image: url(Mag88_img/mainvisual.jpg) ;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  margin-bottom: 80px;
+  position: relative;
+}
+
+#header .site-title {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+}
+
+/* --magazine-------------------------- */
+#magazine {
+  margin: 100px auto;
+}
+
+#magazine .magazine-text {
+  width: 560px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#magazine .archive-new {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+#magazine .archive-new .item {
+  position: relative;
+  width: 49%;
+}
+
+
+#magazine .archive-new .item  .archive-new-block {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  text-align: center;
+  margin: 0 auto;
+  width: 280px;
+  height: 100px;
+  padding: 10px 20px;
+  font-weight: bold;
+  position: absolute;
+  top: 40%; 
+  left: 0;
+  right: 0; 
+}
+
+#magazine .archive-new-block h3 {
+  font-size: 1.25rem;
+}
+
+.archive:hover,.new:hover {
+  opacity: 0.7;
+}
+
+/* --fashion--------------------------------------- */
+#fashion {
+  height:520px;
+  margin-bottom: 100px;
+  background-image: url(Mag88_img/fashion.jpg);
+  background-size: contain;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  text-align: center;
+  background-color: rgb(250, 250, 250);
+}
+
+
+/* --catalog-antique-------------------------- */
+.catalog-antique  {
+ background-color: #f7f7f7;
+ margin: 0 auto;
+ width: 100%;
+ margin: 80px 0;
+ align-items: center;
+}
+
+.catalog-antique .ca_block {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.catalog-antique .ca_image {
+  width: 47%;
+}
+
+.catalog-antique .ca_text {
+  width: 50%;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.catalog-antique .ca_text p {
+  margin-bottom: 30px;
+}
+
+
+/* --footer--------------------------- */
+
+
+#footer .footer-nav {
+  background-color: #3f3e3a;
+  color: white;
+  display: flex;
+  width: 100%;
+  padding: 100px;
+}
+
+.f_list {
+  width: calc(100%/3);
+  list-style: circle;
+  display: block;
+  align-items: center;
+  list-style-position:inside;
+  font-size: 0.75rem;
+  line-height: 1.5rem;
+  padding:0 20px ;
+}
+
+.f_list h3{
+  margin-bottom: 15px;
+}
+
+ .top .site-title  {
+ padding: 60px 0 0 30px;
+}
+
+.list li::before {
+  content: "-";
+  margin-right: 5px;
+}
+
+#footer .footer-Mag88 {
+  text-align: center;
+  font-size: small;
+  padding: 30px;
+}
+
+/* --レスポンシブ----------------------------------------- */
+@media screen and (max-width: 896px) { 
+
+/* Magazine */
+/* -------------------------------------------*/
+#magazine .archive-new  {
+  flex-direction: column;
+  
+}
+
+#magazine .archive-new .item {
+  width: 100%;
+ }
+
+ #magazine .archive-new .item:first-child {
+  margin-bottom: 30px;
+  }
+
+/* Fashion-Style */
+/* -------------------------------------------*/
+ #fashion {
+  height: 450px;
+  padding-top: 35px;
+ } 
+
+/* Catalog & Antique */
+/* -------------------------------------------*/
+.catalog-antique .ca_block {
+ flex-direction: column;
+}
+
+.catalog-antique .ca_block .ca_image {
+ width: 100%;
+}
+
+.catalog-antique .ca_block .ca_text {
+  width: 100%;
+  margin-bottom: 60px;
+ }
+
+/* --footer--------------------------- */
+#footer .footer-nav {
+ flex-direction: column;
+ width: 100%;    
+ padding: 0;
+ } 
+
+#footer .footer-nav  .top{
+ text-align: center;
+ }
+
+
+
+ .f_list {
+  width: 100%;     
+  margin: 20px 0;
+ }
+
+}
